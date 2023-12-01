@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["metro.config.js"],
+      "parser": "@babel/eslint-parser",
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    },
+    {
+      "files": ["babel.config.js"],
+      "parser": "@babel/eslint-parser",
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    }
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "ignorePatterns": ["expo-env.d.ts"],
+  "rules": {
+    "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
+    "global-require": "off"
+  }
+}
