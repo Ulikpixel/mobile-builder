@@ -5,6 +5,19 @@ module.exports = function (api) {
     plugins: [
       // Required for expo-router
       'expo-router/babel',
+      [
+        "module-resolver",
+        {
+          alias: {
+            components: "./src/components",
+            api: "./src/api",
+            assets: "./src/assets",
+            constants: "./src/constants",
+            types: "./src/types",
+            utils: "./src/utils",
+          },
+        },
+      ],
     ],
   };
 };
