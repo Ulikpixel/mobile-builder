@@ -35,6 +35,7 @@
     "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
     "global-require": "off",
     "@typescript-eslint/no-unsafe-call": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off"
   }
 }

@@ -4,7 +4,7 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
 import { useColorScheme } from 'react-native'
-import SpaceMonoFont from '../src/assets/fonts/SpaceMono-Regular.ttf'
+import { FONTS } from 'constants/fonts'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -28,7 +28,7 @@ const RootLayoutNav: FC = () => {
 
 const RootLayout: FC = () => {
   const [loaded, error] = useFonts({
-    SpaceMono: SpaceMonoFont,
+    ...FONTS,
     ...FontAwesome.font,
   })
 

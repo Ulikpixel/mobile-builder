@@ -8,7 +8,7 @@ const NotFoundScreen: FC = () => (
     <View>
       <Text>This screen doesnt exist.</Text>
       <Link href="/">
-        <Text>Go to home screen!asd</Text>
+        <Text>Go to home screen!</Text>
       </Link>
     </View>
   </>
