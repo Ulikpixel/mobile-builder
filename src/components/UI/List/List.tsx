@@ -1,16 +1,14 @@
+import { CONFIG_STYLES } from 'constants/theme'
 import React, { FC } from 'react'
 import { FlatList, Text } from 'react-native'
 import styled from 'styled-components/native'
-import { ITheme } from '../../../types/theme'
 
 interface ListProps {
-  data: {
-    key: string
-  }[]
+  data: string[]
 }
 
-export const ListIndex = styled.Text<ITheme>`
-  color: ${props => props.theme.colors['organick-dark']};
+export const ListIndex = styled.Text`
+  color: ${CONFIG_STYLES.colors['organick-dark']};
   font-size: 14px;
   line-height: 20px;
 `
@@ -31,10 +29,9 @@ export const ListItem = styled.View`
 
 const List: FC<ListProps> = ({ data }) => (
   <FlatList
-    data={data}
+    data={data.map(key => ({ key }))}
     renderItem={({ item, index }) => (
       <ListItem>
-        <Text>asd</Text>
         <ListIndex>{index}.</ListIndex>
         <Text>{item.key}</Text>
       </ListItem>
