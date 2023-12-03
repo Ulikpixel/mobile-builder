@@ -34,6 +34,7 @@ const List: FC<ListProps> = ({ data }) => (
     data={data}
     renderItem={({ item, index }) => (
       <ListItem>
+        <Text>asd</Text>
         <ListIndex>{index}.</ListIndex>
         <Text>{item.key}</Text>
       </ListItem>
