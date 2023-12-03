@@ -76,9 +76,11 @@
     "react-refresh": "~0.14.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "src/**/*.{js,ts,jsx,tsx}": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "npm run typecheck",
+      "npm run test"
     ]
   },
   "private": true
