@@ -8,6 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "eslint .",
+    "prettier": "prettier --write",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
     "test": "jest",
@@ -76,7 +77,12 @@
     "react-refresh": "~0.14.0"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": []
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "npm run typecheck",
+      "npm run test"
+    ]
   },
   "private": true
 }
