@@ -77,6 +77,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
+      "npm run typecheck",
       "prettier --write",
       "eslint --fix",
       "npm run test"
